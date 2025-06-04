@@ -1,16 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coming Soon</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Sifaka - Redirecting...</title>
+
+    <!-- Meta refresh redirect - redirects after 0 seconds -->
+    <meta http-equiv="refresh" content="0; url=https://github.com/sifaka-ai/sifaka">
+
+    <!-- Canonical link for SEO -->
+    <link rel="canonical" href="https://github.com/sifaka-ai/sifaka">
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            max-width: 500px;
+        }
+
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top: 3px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 2rem;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        h1 {
+            margin: 0 0 1rem 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        p {
+            margin: 0 0 2rem 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .redirect-link {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: 600;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.3s ease;
+        }
+
+        .redirect-link:hover {
+            border-bottom: 2px solid #ffd700;
+        }
+
+        .manual-note {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-top: 1rem;
+        }
+    </style>
 </head>
+
 <body>
     <div class="container">
-        <img src="sifaka.jpg" alt="Coming Soon" class="coming-soon-image">
+        <div class="spinner"></div>
+        <h1>Sifaka</h1>
+        <p>Redirecting to our GitHub repository...</p>
+        <p>
+            If you're not redirected automatically,
+            <a href="https://github.com/sifaka-ai/sifaka" class="redirect-link">click here</a>
+        </p>
+        <div class="manual-note">
+            You should be redirected in a moment.
+        </div>
     </div>
+
+    <script>
+        // JavaScript fallback redirect (in case meta refresh fails)
+        setTimeout(function () {
+            window.location.href = "https://github.com/sifaka-ai/sifaka";
+        }, 1000);
+
+        // Immediate redirect attempt
+        if (window.location.href !== "https://github.com/sifaka-ai/sifaka") {
+            window.location.replace("https://github.com/sifaka-ai/sifaka");
+        }
+    </script>
 </body>
+
 </html>
